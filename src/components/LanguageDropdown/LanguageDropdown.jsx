@@ -1,4 +1,8 @@
-import { germanyImg, italyImg, russiaImg, spainImg } from "@/assets/data";
+import germanyImg from "../../assets/images/flags/germany.jpg";
+import italyImg from "../../assets/images/flags/italy.jpg";
+import russiaImg from "../../assets/images/flags/russia.jpg";
+import spainImg from "../../assets/images/flags/spain.jpg";
+
 import { LuGlobe } from "react-icons/lu";
 
 const languages = [

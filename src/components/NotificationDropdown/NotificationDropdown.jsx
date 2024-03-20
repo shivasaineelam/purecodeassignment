@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Fragment } from "react";
 import { LuBell } from "react-icons/lu";
-import { SimplebarReactClient } from "../../../index";
+import SimplebarReactClient from "../SimplebarReactClient/SimplebarReactClient";
 
 const NotificationDropdown = ({ notifications }) => {
   /**

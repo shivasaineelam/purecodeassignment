@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { Fragment } from "react";
 import { LuHome, LuLogOut, LuNewspaper, LuUser } from "react-icons/lu";
-import { cn } from "@/utils";
-import { avatar1Img } from "@/assets/data";
+import cn from "../../helper/verticalmenuhelper/cn";
+import avatar1Img from "../../assets/images/avatars/avatar1.png";
 
 const profileDropdownItems = [
   {
@@ -48,7 +48,7 @@ const ProfileDropdown = () => {
       <div className="hs-dropdown-menu duration mt-2 hidden min-w-[12rem] rounded-lg border border-default-200 bg-white p-2 opacity-0 shadow-md transition-[opacity,margin] hs-dropdown-open:opacity-100 dark:bg-default-50">
         {profileDropdownItems.map((item, idx) => {
           const Icon = item.icon;
-          const lastItem = profileDropdownItems.length - 1 == idx;
+          const lastItem = profileDropdownItems.length - 1 === idx;
           return (
             <Fragment key={item.link + item.name}>
               {lastItem && <hr className="-mx-2 my-2 border-default-200" />}

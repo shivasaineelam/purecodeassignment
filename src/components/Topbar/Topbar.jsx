@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import { LuAlignJustify, LuSearch } from "react-icons/lu";
-import MaximizeScreen from "./MaximizeScreen";
-import LanguageDropdown from "./LanguageDropdown";
-import ProfileDropdown from "./ProfileDropdown";
-import NotificationDropdown from "./NotificationDropdown";
-import { logoDarkImg, logoLightImg } from "@/assets/data/images";
-import { notificationsData } from "@/assets/data";
+import MaximizeScreen from "../MaximizeScreen/MaximizeScreen";
+import LanguageDropdown from "./../LanguageDropdown/LanguageDropdown";
+import ProfileDropdown from "../ProfileDropdown/ProfileDropdown";
+import NotificationDropdown from "../NotificationDropdown/NotificationDropdown";
+import logoDarkImg from "../../assets/images/navbar/logo-dark.png";
+import logoLightImg from "../../assets/images/navbar/logo-light.png";
+import { notificationsData } from "../../helper/notificationdata/notificationdata";
 
 const TopbarAdmin = () => {
   return (
