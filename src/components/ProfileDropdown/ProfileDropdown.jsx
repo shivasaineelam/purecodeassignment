@@ -28,13 +28,7 @@ const profileDropdownItems = [
   },
 ];
 
-const ProfileDropdown = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
-
+const ProfileDropdown = ({ isOpen, toggleDropdown }) => {
   return (
     <div className="relative inline-block ">
       <button

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { LuGlobe } from "react-icons/lu";
 import germanyImg from "../../assets/images/flags/germany.jpg";
 import italyImg from "../../assets/images/flags/italy.jpg";
@@ -24,13 +24,7 @@ const languages = [
   },
 ];
 
-const LanguageDropdown = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
-
+const LanguageDropdown = ({ isOpen, toggleDropdown }) => {
   return (
     <div className="relative inline-block right-5">
       <button

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import { LuAlignJustify, LuSearch } from "react-icons/lu";
 import MaximizeScreen from "../MaximizeScreen/MaximizeScreen";
 import LanguageDropdown from "./../LanguageDropdown/LanguageDropdown";
@@ -9,6 +9,28 @@ import logoLightImg from "../../assets/images/navbar/logo-light.png";
 import notificationsData from "../../mock_data/notificationdata/notificationdata";
 
 const TopbarAdmin = () => {
+  const [languageOpen, setLanguageOpen] = useState(false);
+  const [notificationOpen, setNotificationOpen] = useState(false);
+  const [profileOpen, setProfileOpen] = useState(false);
+
+  const toggleLanguageDropdown = () => {
+    setLanguageOpen(!languageOpen);
+    setNotificationOpen(false); // Close notification dropdown when language dropdown is opened
+    setProfileOpen(false); // Close profile dropdown when language dropdown is opened
+  };
+
+  const toggleNotificationDropdown = () => {
+    setNotificationOpen(!notificationOpen);
+    setLanguageOpen(false); // Close language dropdown when notification dropdown is opened
+    setProfileOpen(false); // Close profile dropdown when notification dropdown is opened
+  };
+
+  const toggleProfileDropdown = () => {
+    setProfileOpen(!profileOpen);
+    setLanguageOpen(false); // Close language dropdown when profile dropdown is opened
+    setNotificationOpen(false); // Close notification dropdown when profile dropdown is opened
+  };
+
   return (
     <header className="sticky top-0 z-40 flex h-18 w-full border-b border-default-200 bg-white dark:bg-default-50 lg:ps-64 hide-in-print">
       <nav className="flex w-full items-center gap-4 px-6">
@@ -56,7 +78,10 @@ const TopbarAdmin = () => {
 
         <div className="ms-auto flex items-center gap-10">
           <div className="hidden md:flex">
-            <LanguageDropdown />
+            <LanguageDropdown
+              isOpen={languageOpen}
+              toggleDropdown={toggleLanguageDropdown}
+            />
           </div>
 
           <div className="hidden lg:flex">
@@ -64,11 +89,18 @@ const TopbarAdmin = () => {
           </div>
 
           <div className="hidden md:flex">
-            <NotificationDropdown notifications={notificationsData} />
+            <NotificationDropdown
+              notifications={notificationsData}
+              isOpen={notificationOpen}
+              toggleDropdown={toggleNotificationDropdown}
+            />
           </div>
 
           <div className="flex">
-            <ProfileDropdown />
+            <ProfileDropdown
+              isOpen={profileOpen}
+              toggleDropdown={toggleProfileDropdown}
+            />
           </div>
         </div>
       </nav>

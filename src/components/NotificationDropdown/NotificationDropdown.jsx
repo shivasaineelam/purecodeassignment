@@ -1,15 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { LuBell } from "react-icons/lu";
 import SimplebarReactClient from "../SimplebarReactClient/SimplebarReactClient";
 
-const NotificationDropdown = ({ notifications }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
-
+const NotificationDropdown = ({ notifications, isOpen, toggleDropdown }) => {
   return (
     <div className="relative inline-block">
       <button
