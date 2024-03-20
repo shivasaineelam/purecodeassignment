@@ -1,9 +1,9 @@
+import React, { useState } from "react";
+import { LuGlobe } from "react-icons/lu";
 import germanyImg from "../../assets/images/flags/germany.jpg";
 import italyImg from "../../assets/images/flags/italy.jpg";
 import russiaImg from "../../assets/images/flags/russia.jpg";
 import spainImg from "../../assets/images/flags/spain.jpg";
-
-import { LuGlobe } from "react-icons/lu";
 
 const languages = [
   {
@@ -25,32 +25,37 @@ const languages = [
 ];
 
 const LanguageDropdown = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div className="hs-dropdown relative inline-flex [--placement:bottom-right]">
+    <div className="relative inline-block right-5">
       <button
-        id="hs-dropdown-with-header"
-        type="button"
-        className="hs-dropdown-toggle inline-flex h-10 w-10 flex-shrink-0 items-center justify-center gap-2 rounded-full bg-default-100 align-middle text-xs font-medium text-default-700 transition-all hover:text-primary"
+        onClick={toggleDropdown}
+        className="inline-flex items-center justify-center h-10 w-10 bg-default-100 rounded-full text-default-700 hover:text-primary focus:outline-none"
       >
         <LuGlobe size={24} />
       </button>
-      <div className="hs-dropdown-menu duration mt-2 hidden min-w-[12rem] rounded-lg border border-default-200 bg-white p-2 opacity-0 shadow-md transition-[opacity,margin] hs-dropdown-open:opacity-100 dark:bg-default-50">
-        {languages.map((language) => (
-          <button
-            key={language.name}
-            className="flex w-full items-center gap-x-3.5 rounded px-3 py-2 text-sm transition-all hover:bg-default-100"
-          >
-            <img
-              alt="user-image"
-              src={language.image}
-              width={24}
-              height={16}
-              className="h-4"
-            />
-            <span className="align-middle">{language.name}</span>
-          </button>
-        ))}
-      </div>
+      {isOpen && (
+        <div className="absolute z-10 mt-2 py-2 w-56 bg-white border border-default-200 rounded-md shadow-lg right-7">
+          {languages.map((language) => (
+            <button
+              key={language.name}
+              className="block w-full px-4 py-2 text-sm text-default-700 hover:bg-default-100"
+            >
+              <img
+                alt="language-flag"
+                src={language.image}
+                className="inline-block h-4 w-6 mr-2"
+              />
+              {language.name}
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

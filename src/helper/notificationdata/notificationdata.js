@@ -9,7 +9,7 @@ function subtractHours(date, minutes) {
   return date;
 }
 
-export const notificationsData = [
+const notificationsData = [
   {
     id: 1,
     name: "Datacorp",
@@ -46,3 +46,4 @@ export const notificationsData = [
     createdAt: subtractHours(new Date(), 1820),
   },
 ];
+export default notificationsData;

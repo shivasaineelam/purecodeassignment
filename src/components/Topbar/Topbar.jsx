@@ -6,7 +6,7 @@ import ProfileDropdown from "../ProfileDropdown/ProfileDropdown";
 import NotificationDropdown from "../NotificationDropdown/NotificationDropdown";
 import logoDarkImg from "../../assets/images/navbar/logo-dark.png";
 import logoLightImg from "../../assets/images/navbar/logo-light.png";
-import { notificationsData } from "../../helper/notificationdata/notificationdata";
+import notificationsData from "../../helper/notificationdata/notificationdata";
 
 const TopbarAdmin = () => {
   return (
@@ -25,22 +25,20 @@ const TopbarAdmin = () => {
         </div>
 
         <div className="flex lg:hidden">
-          <Link to="/home">
-            <img
-              src={logoDarkImg}
-              height={40}
-              width={130}
-              alt="logo"
-              className="flex h-10 w-full dark:hidden"
-            />
-            <img
-              src={logoLightImg}
-              height={40}
-              width={130}
-              alt="logo"
-              className="hidden h-10 w-full dark:flex"
-            />
-          </Link>
+          <img
+            src={logoDarkImg}
+            height={40}
+            width={130}
+            alt="logo"
+            className="flex h-10 w-full dark:hidden"
+          />
+          <img
+            src={logoLightImg}
+            height={40}
+            width={130}
+            alt="logo"
+            className="hidden h-10 w-full dark:flex"
+          />
         </div>
 
         <div className="hidden lg:flex">
@@ -56,7 +54,7 @@ const TopbarAdmin = () => {
           </div>
         </div>
 
-        <div className="ms-auto flex items-center gap-4">
+        <div className="ms-auto flex items-center gap-10">
           <div className="hidden md:flex">
             <LanguageDropdown />
           </div>
