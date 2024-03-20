@@ -1,6 +1,5 @@
 import avatar1Img from "./../../assets/images/avatars/avatar1.png";
 import avatar2Img from "./../../assets/images/avatars/avatar2.png";
-
 import avatar3Img from "./../../assets/images/avatars/avatar3.png";
 import avatar4Img from "./../../assets/images/avatars/avatar4.png";
 import avatar5Img from "./../../assets/images/avatars/avatar5.png";

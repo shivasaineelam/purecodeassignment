@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import SimplebarReactClient from "../SimplebarReactClient/SimplebarReactClient";
 import { LuLogOut, LuUserCircle2, LuZap } from "react-icons/lu";
 import logoDarkImg from "./../../assets/images/navbar/logo-dark.png";
-import logoLightImg from "./../../assets/images/navbar/logo-light.png";
+// import logoLightImg from "./../../assets/images/navbar/logo-light.png";
 
 import offerBgOtherImg from "./../../assets/images/navbar/offer-bg.png";
 
@@ -26,7 +26,7 @@ const MenuAdmin = () => {
             className="flex h-10 dark:hidden"
           />
           <img
-            src={logoLightImg}
+            src={logoDarkImg}
             height={40}
             width={130}
             alt="logo"

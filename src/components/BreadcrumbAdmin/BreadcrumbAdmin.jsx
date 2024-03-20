@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { LuChevronRight } from "react-icons/lu";
-import PageTitle from "./PageTitle";
+import PageTitle from "../PageTitle/PageTitle";
 
 const BreadcrumbAdmin = ({ title, subtitle, link }) => {
   return (

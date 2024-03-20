@@ -4,9 +4,6 @@ import { LuBell } from "react-icons/lu";
 import SimplebarReactClient from "../SimplebarReactClient/SimplebarReactClient";
 
 const NotificationDropdown = ({ notifications }) => {
-  /**
-   * Get time since
-   */
   function timeSince(date) {
     if (typeof date !== "object") {
       date = new Date(date);

@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import BreadcrumbAdmin from "../BreadcrumbAdmin";
+import BreadcrumbAdmin from "../BreadcrumbAdmin/BreadcrumbAdmin";
 
 // images
 import img1 from "../../assets/images/small/small-1.jpg";

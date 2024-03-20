@@ -150,7 +150,7 @@ const VerticalMenu = ({ menuItems }) => {
   }, [activeMenu, menuItems]);
 
   return (
-    <ul className="admin-menu hs-accordion-group flex w-full flex-col gap-1.5 p-4">
+    <ul className="admin-menu hs-accordion-group flex w-full flex-col gap-1.5 p-4 h-80 overflow-y-scroll scrollbar-hide">
       {(menuItems ?? []).map((item) => {
         return (
           <Fragment key={item.key}>
