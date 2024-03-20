@@ -6,7 +6,7 @@ import ProfileDropdown from "../ProfileDropdown/ProfileDropdown";
 import NotificationDropdown from "../NotificationDropdown/NotificationDropdown";
 import logoDarkImg from "../../assets/images/navbar/logo-dark.png";
 import logoLightImg from "../../assets/images/navbar/logo-light.png";
-import notificationsData from "../../helper/notificationdata/notificationdata";
+import notificationsData from "../../mock_data/notificationdata/notificationdata";
 
 const TopbarAdmin = () => {
   return (
