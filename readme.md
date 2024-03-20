@@ -11,7 +11,7 @@ This README outlines the steps followed during the development of the project.
 The project was initiated using `npx create-react-app` command to create a basic React project.
 
 ```bash
-npx create-react-app my-project
+npx create-react-app purecodeassignment
 ```
 
 ## 2. Dependency Extraction
