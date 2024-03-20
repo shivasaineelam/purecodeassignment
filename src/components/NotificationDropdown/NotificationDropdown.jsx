@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { LuBell } from "react-icons/lu";
 import SimplebarReactClient from "../SimplebarReactClient/SimplebarReactClient";
 
@@ -13,18 +12,18 @@ const NotificationDropdown = ({ notifications, isOpen, toggleDropdown }) => {
         <LuBell size={24} />
       </button>
       {isOpen && (
-        <div className="absolute z-10 mt-2 py-2 w-80 bg-white border border-default-200 rounded-md shadow-lg right-10">
+        <div className="absolute z-10 mt-2 py-2 w-80 bg-white border border-default-200 rounded-md shadow-lg right-7 ">
           <div className="px-4 py-2 border-b border-default-200 flex justify-between items-center">
             <h6 className="text-sm font-medium">Notifications</h6>
-            <Link to="" className="text-default-500">
+            <a href="/" className="text-default-500">
               <small>Clear All</small>
-            </Link>
+            </a>
           </div>
-          <SimplebarReactClient className="h-60 px-2 overflow-y-auto">
+          <SimplebarReactClient className="h-60 px-2 overflow-y-auto example">
             {notifications.map((notification, idx) => (
-              <Link
+              <a
                 key={idx}
-                to=""
+                href="/"
                 className="block px-4 py-3 border-b border-default-200 hover:bg-default-100"
               >
                 <div className="flex items-start">
@@ -42,15 +41,15 @@ const NotificationDropdown = ({ notifications, isOpen, toggleDropdown }) => {
                     </p>
                   </div>
                 </div>
-              </Link>
+              </a>
             ))}
           </SimplebarReactClient>
-          <Link
-            to=""
+          <a
+            href="/"
             className="block px-4 py-2 text-center text-sm font-medium text-primary"
           >
             View All
-          </Link>
+          </a>
         </div>
       )}
     </div>

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { LuChevronRight } from "react-icons/lu";
 import PageTitle from "../PageTitle/PageTitle";
 
@@ -13,13 +12,13 @@ const BreadcrumbAdmin = ({ title, subtitle, link }) => {
           className="hidden min-w-0 items-center gap-2 whitespace-nowrap md:flex"
         >
           <li className="text-sm">
-            <Link
-              to={link ?? ""}
+            <a
+              href={link ?? ""}
               className="flex items-center gap-2 align-middle text-default-800 transition-all hover:text-primary-500"
             >
               {subtitle}
               <LuChevronRight size={16} />
-            </Link>
+            </a>
           </li>
           <li
             aria-current="page"
